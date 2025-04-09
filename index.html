@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Para o Amor da Minha Vida 💖</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to bottom, #ffe6e6, #ffe6f0);
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    header {
+      background-color: #ffb3c1;
+      text-align: center;
+      padding: 1.5rem 1rem;
+      color: white;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .mensagens {
+      max-width: 600px;
+      margin: 1.5rem auto;
+      padding: 0 1rem;
+    }
+
+    .mensagens p {
+      background-color: #fff0f5;
+      border-left: 4px solid #ff6699;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      animation: slideUp 1s ease forwards;
+    }
+
+    .galeria {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      max-width: 600px;
+      margin: 1.5rem auto;
+      padding: 0 1rem;
+    }
+
+    .galeria img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .galeria img:hover {
+      transform: scale(1.05);
+    }
+
+    .carta {
+      text-align: center;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    .carta button {
+      background-color: #ff6699;
+      color: white;
+      border: none;
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .carta button:hover {
+      background-color: #ff3366;
+    }
+
+    .carta-texto {
+      display: none;
+      max-width: 500px;
+      margin: 1.5rem auto;
+      background: #fff0f5;
+      padding: 1.2rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      font-size: 1.1rem;
+      animation: fadeIn 1.5s ease;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.2rem;
+      background-color: #ffd6e0;
+      color: #333;
+      font-size: 0.9rem;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @media (max-width: 500px) {
+      header h1 {
+        font-size: 1.6rem;
+      }
+
+      .galeria {
+        grid-template-columns: 1fr;
+      }
+
+      .mensagens p,
+      .carta-texto {
+        font-size: 1rem;
+      }
+
+      .carta button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Te Amo, Meu Amor 💘</h1>
+  </header>
+
+  <section class="mensagens">
+    <p>Você é o meu melhor presente da vida. Cada momento ao seu lado é único e especial.</p>
+    <p>Te amar é fácil, natural e a melhor parte do meu dia.</p>
+    <p>Obrigada por ser luz, carinho e tudo de mais lindo que existe no meu mundo.</p>
+    <p>Que a nossa história continue sendo escrita com amor, cuidado e muitos sorrisos.</p>
+  </section>
+
+  <section class="galeria">
+    <img src="pedido.jpg" alt="Nós dois sorrindo">
+    <img src="IMG_9408.jpg" alt="Momento especial">
+    <img src="IMG_0833.jpg" alt="Um dia inesquecível">
+    <img src="IMG_0505.jpg" alt="Mais um capítulo do nosso amor">
+    <img src="junina.jpg" alt="Risadas juntos">
+    <img src="natal.jpg" alt="Abraço de filme">
+  </section>
+
+  <section class="carta">
+    <button onclick="mostrarCarta()">💌 Leia uma carta de amor</button>
+    <div id="cartaTexto" class="carta-texto">
+      <p>Meu amor,</p>
+      <p>Desde que você entrou na minha vida, tudo ficou mais bonito, mais leve, mais cheio de sentido. Você é minha paz, minha inspiração e minha alegria diária.</p>
+      <p>Prometo cuidar do nosso amor com carinho, dedicação e muitos abraços apertados.</p>
+      <p>Te amo infinitamente. Para sempre seu japinha favorito ❤️</p>
+    </div>
+  </section>
+
+  <footer>
+    Feito com muito amor 💖.
+  </footer>
+
+  <audio autoplay loop hidden>
+    <source src="musica.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    function mostrarCarta() {
+      const carta = document.getElementById('cartaTexto');
+      carta.style.display = 'block';
+      carta.scrollIntoView({ behavior: "smooth" });
+    }
+  </script>
+
+</body>
+</html>
