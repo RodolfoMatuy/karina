@@ -1,190 +1,107 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Para o Amor da Minha Vida 💖</title>
+  <title>Para Karina 💖</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans&display=swap" rel="stylesheet">
   <style>
     * {
+      margin: 0;
+      padding: 0;
       box-sizing: border-box;
     }
 
     body {
-      font-family: 'Arial', sans-serif;
-      background: linear-gradient(to bottom, #ffe6e6, #ffe6f0);
-      margin: 0;
-      padding: 0;
-      color: #333;
-    }
-
-    header {
-      background-color: #ffb3c1;
+      font-family: 'Open Sans', sans-serif;
+      background: linear-gradient(to bottom right, #ff7eb3, #ff758c);
+      color: #fff;
       text-align: center;
-      padding: 1.5rem 1rem;
-      color: white;
+      padding: 20px;
+      animation: fadeIn 2s ease-in;
     }
 
-    header h1 {
-      margin: 0;
-      font-size: 2rem;
-      animation: fadeIn 2s ease-in-out;
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3rem;
+      margin-bottom: 10px;
+      color: #fff;
+      text-shadow: 2px 2px #ff4d6d;
     }
 
-    .mensagens {
-      max-width: 600px;
-      margin: 1.5rem auto;
-      padding: 0 1rem;
-    }
-
-    .mensagens p {
-      background-color: #fff0f5;
-      border-left: 4px solid #ff6699;
-      padding: 1rem;
-      margin-bottom: 1rem;
-      border-radius: 8px;
-      font-size: 1.1rem;
-      animation: slideUp 1s ease forwards;
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      line-height: 1.5;
+      animation: slideUp 1.5s ease-out;
     }
 
     .galeria {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-      max-width: 600px;
-      margin: 1.5rem auto;
-      padding: 0 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 15px;
+      margin-top: 30px;
+      animation: fadeIn 2.5s ease;
     }
 
     .galeria img {
       width: 100%;
       height: auto;
-      border-radius: 12px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .galeria img:hover {
       transform: scale(1.05);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.4);
     }
 
-    .carta {
-      text-align: center;
-      margin: 2rem auto;
-      padding: 0 1rem;
+    .coracao {
+      font-size: 2rem;
+      animation: pulse 1.5s infinite;
+      margin-top: 10px;
     }
 
-    .carta button {
-      background-color: #ff6699;
-      color: white;
-      border: none;
-      padding: 1rem 2rem;
-      font-size: 1rem;
-      border-radius: 30px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-
-    .carta button:hover {
-      background-color: #ff3366;
-    }
-
-    .carta-texto {
-      display: none;
-      max-width: 500px;
-      margin: 1.5rem auto;
-      background: #fff0f5;
-      padding: 1.2rem;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      font-size: 1.1rem;
-      animation: fadeIn 1.5s ease;
-    }
-
-    footer {
-      text-align: center;
-      padding: 1.2rem;
-      background-color: #ffd6e0;
-      color: #333;
-      font-size: 0.9rem;
+    audio {
+      margin-top: 25px;
+      width: 100%;
+      max-width: 400px;
     }
 
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-10px); }
-      to { opacity: 1; transform: translateY(0); }
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
 
     @keyframes slideUp {
-      from { transform: translateY(30px); opacity: 0; }
+      from { transform: translateY(20px); opacity: 0; }
       to { transform: translateY(0); opacity: 1; }
     }
 
-    @media (max-width: 500px) {
-      header h1 {
-        font-size: 1.6rem;
-      }
-
-      .galeria {
-        grid-template-columns: 1fr;
-      }
-
-      .mensagens p,
-      .carta-texto {
-        font-size: 1rem;
-      }
-
-      .carta button {
-        width: 100%;
-      }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.2); }
     }
   </style>
 </head>
 <body>
+  <h1>Para Karina 💖</h1>
+  <p>Você é a melhor parte da minha vida. <br> Que essas lembranças nos tragam ainda mais amor todos os dias.</p>
+  <div class="coracao">💓</div>
 
-  <header>
-    <h1>Te Amo, Meu Amor 💘</h1>
-  </header>
+  <div class="galeria">
+    <img src="IMG_0505.JPG" alt="Foto 1">
+    <img src="IMG_0833.JPG" alt="Foto 2">
+    <img src="IMG_9408.JPG" alt="Foto 3">
+    <img src="junina.JPG" alt="Foto 4">
+    <img src="natal.JPG" alt="Foto 5">
+    <img src="pedido.JPG" alt="Foto 6">
+  </div>
 
-  <section class="mensagens">
-    <p>Você é o meu melhor presente da vida. Cada momento ao seu lado é único e especial.</p>
-    <p>Te amar é fácil, natural e a melhor parte do meu dia.</p>
-    <p>Obrigada por ser luz, carinho e tudo de mais lindo que existe no meu mundo.</p>
-    <p>Que a nossa história continue sendo escrita com amor, cuidado e muitos sorrisos.</p>
-  </section>
-
-  <section class="galeria">
-    <img src="pedido.JPG" alt="1">
-    <img src="IMG_9408.JPG" alt="2">
-    <img src="IMG_0833.JPG" alt="3">
-    <img src="IMG_0505.JPG" alt="4">
-    <img src="junina.JPG" alt="5">
-    <img src="natal.JPG" alt="6">
-  </section>
-
-  <section class="carta">
-    <button onclick="mostrarCarta()">💌 Leia uma carta de amor</button>
-    <div id="cartaTexto" class="carta-texto">
-      <p>Meu amor,</p>
-      <p>Desde que você entrou na minha vida, tudo ficou mais bonito, mais leve, mais cheio de sentido. Você é minha paz, minha inspiração e minha alegria diária.</p>
-      <p>Prometo cuidar do nosso amor com carinho, dedicação e muitos beijinhos e abraços.</p>
-      <p>Te amo infinitamente. Para sempre seu japinha favorito ❤️</p>
-    </div>
-  </section>
-
-  <footer>
-    Feito com muito amor 💖.
-  </footer>
-
-  <audio autoplay loop hidden>
+  <audio controls autoplay loop>
     <source src="musica.mp3" type="audio/mpeg">
+    Seu navegador não suporta áudio.
   </audio>
-
-  <script>
-    function mostrarCarta() {
-      const carta = document.getElementById('cartaTexto');
-      carta.style.display = 'block';
-      carta.scrollIntoView({ behavior: "smooth" });
-    }
-  </script>
-
 </body>
 </html>
