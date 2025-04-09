@@ -29,17 +29,44 @@
       text-shadow: 2px 2px #ff4d6d;
     }
 
+    .mensagens {
+      font-size: 1.2rem;
+      margin: 20px auto;
+      max-width: 700px;
+      animation: slideUp 1.5s ease-out;
+    }
+
+    .mensagens p {
+      margin-bottom: 12px;
+    }
+
+    .btn-carta {
+      background-color: #ff4d6d;
+      color: #fff;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 20px;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 25px;
+      transition: background-color 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .btn-carta:hover {
+      background-color: #ff3759;
+    }
+
     .carta {
       font-size: 1.1rem;
       background-color: rgba(255, 255, 255, 0.15);
       padding: 20px;
       border-radius: 15px;
-      margin-bottom: 30px;
+      margin: 25px auto;
       line-height: 1.6;
       max-width: 700px;
-      margin-left: auto;
-      margin-right: auto;
-      animation: slideUp 1.5s ease-out;
+      display: none;
+      animation: fadeIn 1.5s ease;
     }
 
     .coracao {
@@ -94,7 +121,15 @@
 <body>
   <h1>Para Karina 💖</h1>
 
-  <div class="carta">
+  <div class="mensagens">
+    <p>Você é a razão do meu sorriso todos os dias.</p>
+    <p>Com você, a vida ficou mais bonita e cheia de cor.</p>
+    <p>Nosso amor é meu lugar favorito no mundo.</p>
+  </div>
+
+  <button class="btn-carta" onclick="mostrarCarta()">Clique para ler a carta 💌</button>
+
+  <div class="carta" id="carta">
     <p>Meu amor,</p>
     <p>
       Desde que você entrou na minha vida, tudo ficou mais bonito, mais leve, mais cheio de sentido.
@@ -124,5 +159,13 @@
     <source src="musica.mp3" type="audio/mpeg">
     Seu navegador não suporta áudio.
   </audio>
+
+  <script>
+    function mostrarCarta() {
+      const carta = document.getElementById("carta");
+      carta.style.display = "block";
+      document.querySelector(".btn-carta").style.display = "none";
+    }
+  </script>
 </body>
 </html>
