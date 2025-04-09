@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Para o Amor da Minha Vida 💖</title>
+  <title>Para Karina 💖</title>
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans&display=swap" rel="stylesheet">
   <style>
     * {
@@ -22,7 +22,7 @@
     }
 
     h1 {
-      font-family: 'Brush Script', cursive;
+      font-family: 'Great Vibes', cursive;
       font-size: 3rem;
       margin-bottom: 10px;
       color: #fff;
@@ -97,9 +97,10 @@
     }
 
     audio {
-      margin-top: 25px;
+      margin: 30px auto 10px;
       width: 100%;
       max-width: 400px;
+      display: block;
     }
 
     @keyframes fadeIn {
@@ -119,7 +120,7 @@
   </style>
 </head>
 <body>
-  <h1>Para o Amor da Minha Vida 💖</h1>
+  <h1>Para Karina 💖</h1>
 
   <div class="mensagens">
     <p>Você é o meu melhor presente da vida. Cada momento ao seu lado é único e especial.</p>
@@ -145,6 +146,10 @@
     </p>
   </div>
 
+  <audio controls>
+    <source src="musica.mp3" type="audio/mpeg">
+  </audio>
+
   <div class="coracao">💓</div>
 
   <div class="galeria">
@@ -156,10 +161,6 @@
     <img src="pedido.JPG" alt="Foto 6">
   </div>
 
-  <audio controls autoplay loop>
-    <source src="musica.mp3" type="audio/mpeg">
-  </audio>
-
   <script>
     function mostrarCarta() {
       const carta = document.getElementById("carta");
@@ -167,10 +168,5 @@
       document.querySelector(".btn-carta").style.display = "none";
     }
   </script>
-
-  <footer>
-    Feito com muito amor 💖.
-  </footer>
-
 </body>
 </html>
