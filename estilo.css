@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #ffc0cb;
+  color: #4d002b;
+  text-align: center;
+  padding: 20px;
+  animation: fadeIn 2s ease-in;
+  position: relative;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3.2rem;
+  color: #fff;
+  text-shadow: 2px 2px 3px #000;
+  border-bottom: 2px solid #000;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+}
+
+.mensagens {
+  font-size: 1.2rem;
+  margin: 20px auto;
+  max-width: 700px;
+}
+
+.mensagens p {
+  margin-bottom: 12px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fraseFade 1s forwards;
+}
+
+.mensagens p:nth-child(1) { animation-delay: 0.2s; }
+.mensagens p:nth-child(2) { animation-delay: 0.6s; }
+.mensagens p:nth-child(3) { animation-delay: 1s; }
+.mensagens p:nth-child(4) { animation-delay: 1.4s; }
+.mensagens p:nth-child(5) { animation-delay: 1.8s; }
+.mensagens p:nth-child(6) { animation-delay: 2.2s; }
+
+.btn-carta {
+  background-color: #ff4d6d;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 25px;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.btn-carta:hover {
+  background-color: #ff3759;
+}
+
+.carta {
+  font-size: 1.1rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  border-radius: 15px;
+  margin: 25px auto;
+  line-height: 1.6;
+  max-width: 700px;
+  display: none;
+  animation: fadeIn 1.5s ease;
+}
+
+audio {
+  margin: 30px auto 10px;
+  width: 100%;
+  max-width: 400px;
+  display: block;
+}
+
+.coracao {
+  font-size: 2rem;
+  animation: pulse 1.5s infinite;
+  margin-top: 10px;
+}
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 15px;
+  margin-top: 30px;
+  animation: fadeIn 2.5s ease;
+}
+
+.galeria img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.galeria img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+}
+
+/* Efeitos adicionais */
+
+#efeito-coracao {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.coracao-flutuante {
+  position: absolute;
+  bottom: 0;
+  animation-name: flutuar;
+  animation-timing-function: ease-in;
+  opacity: 0.8;
+}
+
+@keyframes flutuar {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+
+@keyframes fraseFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
