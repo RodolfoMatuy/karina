@@ -6,6 +6,22 @@
   <title>Para Karina 💖</title>
   <link rel="stylesheet" href="estilo.css">
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+
+    .video-container {
+      display: none;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .video-container iframe {
+      width: 90%;
+      max-width: 560px;
+      height: 315px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(255, 192, 203, 0.5);
+    }
+  </style>
 </head>
 <body>
   <div class="moldura">
@@ -20,25 +36,21 @@
       <p>Eu te amo para sempre e todo sempre.</p>
     </div>
 
-    <button class="btn-carta" onclick="mostrarCarta()">Clique aqui 💌</button>
-
-    <div id="efeito-coracao"></div>
-    <div id="petalas"></div>
-
     <div class="carta" id="carta">
-      <p>Meu amor,</p>
-      <p>Hoje completamos 1 ano desde o dia que você aceitou namorar comigo e durante esse período, nós tivemos muitos momentos de alegria, felicidade, amor e parceria, mas nem tudo são flores kkkkkkk também tivemos nossos desentendimentos, nossos deslizes, nossos erros um com o outro. Mas graças a Deus conseguimos passar por todas as adversidades e dificuldades que tivemos pelo caminho, mas obrigado por nunca ter desistido de nós e muito obrigado por ter me aguentado durante esse tempo todo kkkkkk. Mas a única certeza da minha vida é que eu quero e sempre vou escolher você pra ser minha mulher, minha companheira, minha melhor amiga, minha namorada, minha futura esposa e tudo o que essa vida puder me proporcionar. Eu quero conquistar as coisas com você ao meu lado, eu quero ser seu pilar quando tudo estiver caindo, eu quero ser a sua estrada para você continuar seguindo, eu quero ser a sua fé que vai continuar te dando forças, eu quero ser o homem da sua vida. Você muito mais me ensinou o que é amar, mas também me ensinou como é viver feliz com a riqueza e eu não estou falando nem de dinheiro ou bens materiais.</p>
-      <p>Desde que você entrou na minha vida, tudo ficou mais bonito...</p>
-      <p>Te amo infinitamente.<br>Para sempre seu japinha favorito ❤️</p>
-    </div>
+    <p>Meu amor,</p>
+    <p>Hoje completamos 1 ano desde o dia que você aceitou namorar comigo e durante esse período, nós tivemos muitos momentos de alegria, felicidade, amor e parceria, mas nem tudo são flores kkkkkkk também tivemos nossos desentendimentos, nossos deslizes, nossos erros um com o outro. Mas graças a Deus conseguimos passar por todas as adversidades e dificuldades que tivemos pelo caminho, mas obrigado por nunca ter desistido de nós e muito obrigado por ter me aguentado durante esse tempo todo kkkkkk. Mas a única certeza da minha vida é que eu quero e sempre vou escolher você pra ser minha mulher, minha companheira, minha melhor amiga, minha namorada, minha futura esposa e tudo o que essa vida puder me proporcionar. Eu quero conquistar as coisas com você ao meu lado, eu quero ser seu pilar quando tudo estiver caindo, eu quero ser a sua estrada para você continuar seguindo, eu quero ser a sua fé que vai continuar te dando forças, eu quero ser o homem da sua vida. Você muito mais me ensinou o que é amar, mas também me ensinou como é viver feliz com a riqueza e eu não estou falando nem de dinheiro ou bens materiais.</p>
+    <p>Desde que você entrou na minha vida, tudo ficou mais bonito...</p>
+    <p>Te amo infinitamente.<br>Para sempre seu japinha favorito ❤️</p>
+  </div>
 
-    <audio controls>
+    <audio id="audio-romantico" controls>
       <source src="musica.mp3" type="audio/mpeg">
     </audio>
 
-    <div class="video-google-drive" id="video-google" style="display: none;">
-      <iframe src="https://drive.google.com/file/d/1JmbVh88FSr9TvYCtjPT-cuvtU_UCa08B/preview?autoplay=1&vq=hd1080"
-        width="560" height="315" allow="autoplay" frameborder="0" allowfullscreen>
+    <div class="video-container" id="video-container">
+      <iframe id="youtube-video" src="" title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
       </iframe>
     </div>
 
@@ -57,6 +69,11 @@
       <img src="IMG_2738.JPG" alt="Foto 10">
     </div>
   </div>
+
+  <button class="btn-carta" onclick="mostrarCarta()">Clique aqui 💌</button>
+
+<div id="efeito-coracao"></div>
+<div id="petalas"></div>
 
   <script>
     function mostrarCarta() {
@@ -80,43 +97,40 @@
 
   <script>
     const petalasContainer = document.getElementById("petalas");
-    const coracoesContainer = document.getElementById("efeito-coracao");
 
     setInterval(() => {
-      const petala = document.createElement("div");
-      petala.className = "petala";
-      petala.innerText = "🌸";
-      petala.style.left = `${Math.random() * 100}%`;
-      petala.style.fontSize = `${16 + Math.random() * 16}px`;
-      petala.style.animationDuration = `${3 + Math.random() * 2}s`;
-      petalasContainer.appendChild(petala);
-      setTimeout(() => petala.remove(), 5000);
-
-      const coracao = document.createElement("div");
-      coracao.className = "coracao-flutuante";
-      coracao.innerText = "💖";
-      coracao.style.left = `${Math.random() * 100}%`;
-      coracao.style.fontSize = `${16 + Math.random() * 24}px`;
-      coracao.style.animationDuration = `${3 + Math.random() * 2}s`;
-      coracoesContainer.appendChild(coracao);
-      setTimeout(() => coracao.remove(), 5000);
+      const simbolo = Math.random() < 0.5 ? "🌸" : "💖";
+      const item = document.createElement("div");
+      item.className = "petala";
+      item.innerText = simbolo;
+      item.style.left = `${Math.random() * 100}%`;
+      item.style.fontSize = `${16 + Math.random() * 16}px`;
+      item.style.animationDuration = `${3 + Math.random() * 2}s`;
+      petalasContainer.appendChild(item);
+      setTimeout(() => item.remove(), 5000);
     }, 300);
   </script>
 
   <script>
-    const audio = document.querySelector("audio");
-    const videoContainer = document.getElementById("video-google");
+    const audio = document.getElementById("audio-romantico");
+    const videoContainer = document.getElementById("video-container");
+    const youtubeIframe = document.getElementById("youtube-video");
+    let videoLoaded = false;
 
     audio.addEventListener("play", () => {
+      if (!videoLoaded) {
+        youtubeIframe.src = "https://www.youtube.com/embed/GzuSG_146OU?autoplay=1&mute=0";
+        videoLoaded = true;
+      }
       videoContainer.style.display = "flex";
     });
 
     audio.addEventListener("pause", () => {
-      videoContainer.style.display = "none";
+      youtubeIframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
     });
 
     audio.addEventListener("ended", () => {
-      videoContainer.style.display = "none";
+      youtubeIframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
     });
   </script>
 </body>
