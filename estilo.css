@@ -197,17 +197,3 @@ audio {
   display: none;
   margin: 20px auto;
 }
-
-.video-google-drive {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-}
-
-.video-google-drive iframe {
-  width: 80%;
-  max-width: 500px;
-  aspect-ratio: 16 / 9;
-  border-radius: 15px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-}
