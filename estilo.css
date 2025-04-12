@@ -1,4 +1,4 @@
-* {
+{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -13,6 +13,16 @@ body {
   animation: fadeIn 2s ease-in;
   position: relative;
   overflow-x: hidden;
+}
+
+.moldura {
+  border: 10px double #fff;
+  padding: 25px;
+  border-radius: 20px;
+  max-width: 900px;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
 }
 
 h1 {
@@ -108,7 +118,8 @@ audio {
   box-shadow: 0 6px 18px rgba(0,0,0,0.4);
 }
 
-#efeito-coracao {
+#efeito-coracao,
+#petalas {
   position: absolute;
   top: 0;
   left: 0;
@@ -119,7 +130,8 @@ audio {
   z-index: 10;
 }
 
-.coracao-flutuante {
+.coracao-flutuante,
+.petala {
   position: absolute;
   bottom: 0;
   animation-name: flutuar;
@@ -128,14 +140,8 @@ audio {
 }
 
 @keyframes flutuar {
-  0% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-100vh);
-    opacity: 0;
-  }
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(-100vh); opacity: 0; }
 }
 
 @keyframes fadeIn {
@@ -153,4 +159,55 @@ audio {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2.4rem;
+  }
+
+  .mensagens {
+    font-size: 1rem;
+  }
+
+  .btn-carta {
+    font-size: 0.9rem;
+    padding: 10px 16px;
+  }
+
+  .carta {
+    font-size: 1rem;
+    padding: 15px;
+  }
+
+  .galeria {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+
+  .moldura {
+    padding: 15px;
+  }
+}
+
+#video-romantico {
+  width: 60%;
+  height: auto;
+  max-width: 500px;
+  display: none;
+  margin: 20px auto;
+}
+
+.video-google-drive {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.video-google-drive iframe {
+  width: 80%;
+  max-width: 500px;
+  aspect-ratio: 16 / 9;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
